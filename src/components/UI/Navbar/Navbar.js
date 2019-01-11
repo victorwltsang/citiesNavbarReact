@@ -1,67 +1,5 @@
 import React, { Component } from 'react';
-import styled from '@emotion/styled';
-
-const Nav = styled.nav`
-	padding: 20px;
-	margin: 0 auto;
-	max-width: 1440px;
-
-	ul {
-		position: relative;
-		display: flex;
-		justify-content: space-evenly;
-		border-bottom: 2px solid #dbdbdb;
-		padding-bottom: 10px;
-		li {
-			display: inline-block;
-			a {
-				color: #b2b2b2;
-				letter-spacing: 1px;
-				font-size: 1em;
-				padding-bottom: 10px;
-				&:hover {
-					color: #6ca0c5;
-				}
-				&.active {
-					color: #1f1f1f;
-					&:hover {
-						color: #1f1f1f;
-						cursor: default;
-					}
-				}
-			}
-		}
-	}
-	@media only screen and (max-width: 980px) {
-		ul {
-			flex-direction: column;
-			border-bottom: none;
-			li {
-				padding: 15px 0;
-				a {
-					padding-bottom: 4px;
-					&.active {
-						border-bottom: 2px solid #1f1f1f;
-					}
-				}
-			}
-		}
-	}
-`;
-
-const Underline = styled.span`
-	position: absolute;
-	bottom: -2px;
-	height: 2px;
-	background-color: #1f1f1f;
-	transition: all 0.5s ease;
-	width: ${props => props.activeItemWidth}px;
-	left: ${props => props.activeItemLeft}px;
-
-	@media only screen and (max-width: 980px) {
-		display: none;
-	}
-`;
+import './Navbar.css';
 
 class Navbar extends Component {
 	state = {
@@ -99,7 +37,7 @@ class Navbar extends Component {
 
 	render() {
 		return (
-			<Nav>
+			<nav className="navbar">
 				<ul>
 					{this.props.items.map((city, index) => {
 						return (
@@ -114,12 +52,12 @@ class Navbar extends Component {
 							</li>
 						);
 					})}
-					<Underline
-						activeItemWidth={this.state.activeItemWidth}
-						activeItemLeft={this.state.activeItemLeft}
+					<span
+						className="underline"
+						style={{ width: this.state.activeItemWidth, left: this.state.activeItemLeft }}
 					/>
 				</ul>
-			</Nav>
+			</nav>
 		);
 	}
 }
