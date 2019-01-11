@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 
 const Nav = styled.nav`
 	padding: 20px;
+	margin: 0 auto;
+	max-width: 1440px;
 
 	ul {
 		position: relative;
