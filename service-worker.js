@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/citiesNavbarReact/precache-manifest.4083dcddbdf313f4be79d0d5c57abbb8.js"
+  "/citiesNavbarReact/precache-manifest.cd26fef3c570a1f07e7e2e94a3f41fbe.js"
 );
 
 workbox.clientsClaim();
