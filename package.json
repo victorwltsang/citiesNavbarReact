@@ -2,7 +2,7 @@
   "name": "cities-navbar-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://victorwltsang.github.io/citiesNavbarReact",
+  "homepage": "https://victorwltsang.github.io/citiesNavbarReact/",
   "dependencies": {
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
