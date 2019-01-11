@@ -92,8 +92,8 @@ class Navbar extends Component {
 
 	updateUnderlinePosition = () => {
 		this.setState({
-			activeItemWidth: document.getElementsByClassName('active')[0].offsetWidth,
-			activeItemLeft: document.getElementsByClassName('active')[0].offsetLeft
+			activeItemWidth: document.querySelector('nav .active').offsetWidth,
+			activeItemLeft: document.querySelector('nav .active').offsetLeft
 		});
 	};
 
